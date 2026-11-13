@@ -1,35 +1,54 @@
+<div align="center">
+
 # HitL-MKF
 
-Research project page for **HitL-MKF: Human-in-the-Loop Multi-level Knowledge Fusion for Domain Knowledge Graph Construction using Large Language Models**, accepted in *Results in Engineering* (2026).
+**Human-in-the-Loop Multi-level Knowledge Fusion for Domain Knowledge Graph Construction using Large Language Models**
 
-[Project page](https://taojialin617.github.io/hitl-mkf-project/) · [Paper](https://www.sciencedirect.com/science/article/pii/S2590123026050632)
+Jialin Tao · Yuhan Liu · Yufei Liu · Jianzhong Yang<br>
+*Results in Engineering*, 2026
 
-## Overview
+[**Project page ↗**](https://taojialin617.github.io/hitl-mkf-project/) &nbsp; · &nbsp; [**Paper ↗**](https://doi.org/10.1016/j.rineng.2026.114056) &nbsp; · &nbsp; [**Request data & code ↗**](mailto:liuyf@cae.cn)
 
-HitL-MKF connects expert adjudication of uncertain fusion decisions with entity alignment, path fusion, and Two-Stage GraphRAG. It constructs a knowledge graph from 1,421 maintenance work orders and evaluates diagnostic answers on 209 held-out questions from one CNC manufacturer.
+</div>
 
-The complete framework achieves BERT-F1 **0.6493** and Judge Score **8.1109 ± 0.0668**, with the latter summarized over five scoring rounds. These are descriptive results for the evaluated dataset.
+---
 
-## Website
+HitL-MKF combines LLM voting and expert review with **entity alignment**, **path fusion**, and **Two-Stage GraphRAG** for CNC fault diagnosis.
 
-This repository contains the project website, paper figure assets, and bibliographic metadata. It does not contain the research implementation or industrial work-order data. Interactive examples are illustrations, not live diagnostic services.
+![HitL-MKF framework](assets/framework.png)
 
-- `index.html`: page content
-- `style.css`: responsive design
-- `script.js`: method tabs, result comparison, illustrative field completion, figure zoom, citation copy
-- `paper.js` and `citation.bib`: paper metadata
-- `assets/`: public-facing paper figures and visual assets
+| Work orders | Test questions | BERT-F1 | Judge Score |
+|:---:|:---:|:---:|:---:|
+| 1,421 | 209 | **0.6493** | **8.1109 ± 0.0668** |
 
-No build or package installation is required. To preview, serve this directory with any static HTTP server. For example, `python -m http.server 8000`, then open `http://localhost:8000`.
+Judge Score summarizes five scoring rounds. Results are from a single CNC manufacturer; see the paper for evaluation details.
 
-## Data and code availability
+## Data & code
 
-The maintenance work-order data used to construct the knowledge graph are currently not publicly available because they contain confidential company information. The evaluation datasets, including the 209-question diagnostic test set and the set of 100 candidate entity pairs for fusion evaluation, are available on request. The code is also available on request, with confidential company information removed. Contact the authors through the published paper.
+The evaluation datasets, including the **209-question diagnostic test set** and **100 candidate entity pairs**, are available on request. Code is also available on request, with confidential company information removed. The construction work orders are currently not publicly available because they contain confidential company information.
 
-## Deployment
+Contact the corresponding author: [liuyf@cae.cn](mailto:liuyf@cae.cn).
 
-The site uses relative asset paths and supports GitHub Pages under a project subdirectory. Enable Pages with `main` as the source branch and `/ (root)` as the folder. `.nojekyll` keeps deployment buildless.
+## Citation
 
-## Attribution
+```bibtex
+@article{tao2026hitlmkf,
+  title = {HitL-MKF: Human-in-the-Loop Multi-level Knowledge Fusion for Domain Knowledge Graph Construction using Large Language Models},
+  author = {Tao, Jialin and Liu, Yuhan and Liu, Yufei and Yang, Jianzhong},
+  journal = {Results in Engineering},
+  pages = {114056},
+  year = {2026},
+  doi = {10.1016/j.rineng.2026.114056}
+}
+```
 
-The research text, results, and original figures are attributed to the authors of the linked paper. Reuse of publication content is subject to its applicable terms; no additional license for the research data or implementation is granted by this website.
+<details>
+<summary>About this repository</summary>
+
+This repository contains the static project website, paper figures and bibliographic metadata. The research implementation and industrial work-order data are not hosted here.
+
+No build or installation is needed. Serve this directory with a static HTTP server, for example `python -m http.server 8000`. GitHub Pages publishes from `main`, `/ (root)`.
+
+The research text, results and original figures are attributed to the authors of the linked paper. Reuse of publication content is subject to its applicable terms; this website grants no additional license for research data or implementation.
+
+</details>

@@ -1,57 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="HitL-MKF combines human-in-the-loop review, multi-level knowledge fusion and Two-Stage GraphRAG for CNC fault diagnosis. Research project in Results in Engineering.">
-  <meta name="theme-color" content="#f5f5ef">
-  <meta property="og:title" content="HitL-MKF · Human judgment. Connected knowledge.">
-  <meta property="og:description" content="Human-in-the-loop multi-level knowledge fusion for domain knowledge graph construction using large language models.">
-  <meta property="og:type" content="website"><meta property="og:image" content="https://taojialin617.github.io/hitl-mkf-project/assets/social.png">
-  <title>HitL-MKF — Human judgment. Connected knowledge.</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="HitL-MKF: Human-in-the-Loop Multi-level Knowledge Fusion for Domain Knowledge Graph Construction using Large Language Models. Results in Engineering, 2026.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="HitL-MKF | Human-in-the-Loop Knowledge Fusion">
+  <meta property="og:description" content="From fragmented maintenance records to connected diagnostic knowledge. Results in Engineering, 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://taojialin617.github.io/hitl-mkf-project/assets/social.png">
+  <title>HitL-MKF | Research Project</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip" href="#overview">Skip to content</a>
-<header class="nav"><a class="brand" href="#" aria-label="HitL-MKF home"><span class="brand-icon">✳</span> HitL-MKF<span class="brand-note">RESEARCH PROJECT</span></a><nav aria-label="Main navigation"><a href="#method">Method</a><a href="#results">Results</a><a href="#resources">Resources</a><a href="#citation">Cite</a></nav><a class="nav-paper" href="https://www.sciencedirect.com/science/article/pii/S2590123026050632" target="_blank" rel="noopener">Read paper <span>↗</span></a></header>
-<main>
-<section class="hero" id="overview">
-  <div class="hero-copy"><div class="eyebrow"><span class="status-dot"></span> RESULTS IN ENGINEERING <span class="slash">/</span> 2026</div>
-    <h1>Human judgment.<br>Connected <em>knowledge.</em></h1>
-    <p class="hero-summary">Turn fragmented maintenance records into knowledge graphs that support inspectable diagnostic reasoning.</p>
-    <div class="hero-actions"><a class="button primary" target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2590123026050632">Explore the paper <span>↗</span></a><a class="button secondary" href="#method">See how it works <span>↓</span></a></div>
-    <div class="hero-foot"><span class="mini-line"></span> HUMAN-IN-THE-LOOP · KNOWLEDGE FUSION · GRAPHRAG</div>
-  </div>
-  <div class="graph-art" aria-label="Illustration of fragmented records consolidated into a connected diagnostic chain">
-    <div class="graph-top"><span class="mono">KNOWLEDGE, RECONNECTED</span><span class="graph-live">● HUMAN GUIDED</span></div>
-    <svg viewBox="0 0 560 400" role="img" aria-labelledby="graphTitle"><title id="graphTitle">Expert review connects Alarm, Phenomenon, Reason and Solution</title>
-      <defs><pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#d9dfd3"/></pattern></defs>
-      <rect width="560" height="400" fill="url(#grid)"/>
-      <g fill="none" stroke="#d4dccc" stroke-width="1.5"><path d="M55 95L155 60L236 120L340 70L465 110M55 95L120 210L60 302L210 338M155 60L120 210L260 210M340 70L350 230L486 296L465 110M210 338L350 230L442 362"/><path stroke-dasharray="5 6" d="M120 210L350 230M236 120L210 338M60 302L486 296"/></g>
-      <g fill="#e8eddf" stroke="#d3dccb"><circle cx="55" cy="95" r="9"/><circle cx="155" cy="60" r="6"/><circle cx="340" cy="70" r="7"/><circle cx="465" cy="110" r="11"/><circle cx="60" cy="302" r="7"/><circle cx="210" cy="338" r="9"/><circle cx="486" cy="296" r="8"/><circle cx="442" cy="362" r="5"/></g>
-      <path class="graph-route" d="M96 170C140 170 139 256 202 256S260 148 324 148S392 245 462 245" fill="none" stroke="#75954c" stroke-width="3"/>
-      <g class="graph-node"><circle cx="96" cy="170" r="27" fill="#1f392d"/><text x="96" y="176" fill="#fff" text-anchor="middle">A</text><rect x="48" y="208" width="96" height="27" rx="13" fill="white"/><text class="node-label" x="96" y="226" text-anchor="middle">Alarm</text></g>
-      <g class="graph-node"><circle cx="202" cy="256" r="30" fill="#d7eb9c"/><text x="202" y="263" text-anchor="middle">P</text><rect x="146" y="296" width="112" height="27" rx="13" fill="white"/><text class="node-label" x="202" y="314" text-anchor="middle">Phenomenon</text></g>
-      <g class="graph-node"><circle cx="324" cy="148" r="30" fill="#d7eb9c"/><text x="324" y="155" text-anchor="middle">R</text><rect x="280" y="188" width="88" height="27" rx="13" fill="white"/><text class="node-label" x="324" y="206" text-anchor="middle">Reason</text></g>
-      <g class="graph-node"><circle cx="462" cy="245" r="27" fill="#1f392d"/><text x="462" y="251" fill="white" text-anchor="middle">S</text><rect x="415" y="282" width="94" height="27" rx="13" fill="white"/><text class="node-label" x="462" y="300" text-anchor="middle">Solution</text></g>
-      <g transform="translate(186 52)"><rect width="140" height="39" rx="19" fill="white" stroke="#d5ddce"/><circle cx="22" cy="19" r="9" fill="#c2db86"/><path d="m18 19 3 3 5-6" stroke="#25452c" fill="none" stroke-width="1.6"/><text x="40" y="24" font-size="12">Expert review</text><path d="M70 39L81 68" stroke="#98ad80" stroke-dasharray="3 3"/></g>
-    </svg>
-    <div class="graph-bottom"><span>Fragmented records <span class="arrow">→</span> Structured reasoning</span><span class="mono">01—04</span></div>
-  </div>
-</section>
-<section class="paper-block wrap" aria-labelledby="paper-title"><div class="section-code">THE PAPER <span>↘</span></div><div><h2 id="paper-title">HitL-MKF: Human-in-the-Loop Multi-level Knowledge Fusion for Domain Knowledge Graph Construction using Large Language Models</h2><p class="authors" id="authors"></p><p class="affiliations" id="affiliations"></p><a class="text-link" href="https://www.sciencedirect.com/science/article/pii/S2590123026050632" target="_blank" rel="noopener">Results in Engineering · Accepted 2026 ↗</a></div></section>
-<section class="numbers wrap" aria-label="Study at a glance"><div><strong>1,421</strong><span>maintenance work orders</span></div><div><strong>209</strong><span>held-out diagnostic questions</span></div><div><strong>0.6493</strong><span>BERT-F1 · complete framework</span></div><div><strong>8.11<span class="metric-unit">/10</span></strong><span>mean LLM-as-a-Judge score</span></div></section>
-<section class="section wrap" id="method"><div class="section-heading"><div><p class="eyebrow">01 / THE METHOD</p><h2>Better knowledge.<br>Before the answer.</h2></div><p>Expert adjudication at the points of uncertainty. Fusion at two levels. Explicit reasoning paths before maintenance suggestions.</p></div>
-<div class="method-layout"><div class="method-tabs" role="tablist" aria-label="Explore the method" aria-orientation="vertical"><button class="method-tab active" id="tab-extract" role="tab" aria-selected="true" aria-controls="method-panel" data-stage="0"><span>01</span><div>Extract the knowledge<small>From records to structured entities</small></div><b>↗</b></button><button class="method-tab" id="tab-vote" role="tab" aria-selected="false" aria-controls="method-panel" data-stage="1"><span>02</span><div>Review what is uncertain<small>HitL-Vote and expert adjudication</small></div><b>↗</b></button><button class="method-tab" id="tab-fuse" role="tab" aria-selected="false" aria-controls="method-panel" data-stage="2"><span>03</span><div>Fuse at two levels<small>Equivalent entities, compatible paths</small></div><b>↗</b></button><button class="method-tab" id="tab-reason" role="tab" aria-selected="false" aria-controls="method-panel" data-stage="3"><span>04</span><div>Reason, then suggest<small>Two-Stage GraphRAG</small></div><b>↗</b></button></div><div class="method-panel" id="method-panel" role="tabpanel" aria-labelledby="tab-extract" tabindex="0"><span class="panel-label mono" id="stage-tag"></span><h3 id="stage-title"></h3><p id="stage-description"></p><div class="chain" id="stage-chain"></div><p class="panel-note" id="stage-note"></p></div></div>
-<figure class="paper-figure"><button class="zoom-image" data-image="assets/framework.png" aria-label="Enlarge framework figure"><img src="assets/framework.png" alt="Original HitL-MKF framework figure showing knowledge extraction, entity alignment, path fusion and Two-Stage GraphRAG" loading="lazy"><span>View full figure ↗</span></button><figcaption><span>FIGURE 01</span> The complete HitL-MKF framework. Original figure from the paper.</figcaption></figure>
-</section>
-<section class="results-section" id="results"><div class="wrap section"><div class="section-heading"><div><p class="eyebrow">02 / THE EVIDENCE</p><h2>Consolidation matters.</h2></div><p>Compare the graph construction stages under the same Two-Stage GraphRAG strategy, evaluated on 209 held-out questions.</p></div><div class="result-chart"><div class="chart-top"><h3 id="chart-title">BERT-F1</h3><div class="segmented" role="group" aria-label="Result metric"><button data-metric="bert" aria-pressed="true" class="active">BERT-F1</button><button data-metric="judge" aria-pressed="false">Judge Score</button></div></div><div class="chart-rows" id="chart-rows"></div><p class="chart-note" id="chart-note"></p></div>
-<div class="results-bottom"><p><span class="big-plus">+0.0762</span> BERT-F1 over Raw KG under the same two-stage strategy.</p><p><strong>Read the results in context.</strong> Evaluated on data from a single CNC manufacturer. Improvements are descriptive; no statistical significance or real-time guarantees are claimed.</p></div>
-<details class="full-results"><summary>View comparison with retrieval baselines <span>+</span></summary><div class="table-scroll"><table><caption>Selected results from Table 4 of the manuscript</caption><thead><tr><th scope="col">Method</th><th scope="col">BERT-F1 ↑</th><th scope="col">BLEU ↑</th><th scope="col">Judge Score ↑</th></tr></thead><tbody><tr><th scope="row">Naive RAG</th><td>0.2838</td><td>0.0896</td><td>7.0752 ± 0.0878</td></tr><tr><th scope="row">LightRAG</th><td>0.5507</td><td>0.4145</td><td>7.6084 ± 0.0722</td></tr><tr><th scope="row">HippoRAG</th><td>0.5739</td><td>0.4419</td><td>7.5608 ± 0.0741</td></tr><tr class="ours"><th scope="row">HitL-MKF (complete)</th><td>0.6493</td><td>0.5446</td><td>8.1109 ± 0.0668</td></tr></tbody></table></div><p>LightRAG and HippoRAG use local CNC-specific adaptations. Judge Score reports mean ± standard deviation across five scoring rounds, rather than variability across questions.</p></details></div></section>
-<section class="section wrap" id="example"><div class="section-heading"><div><p class="eyebrow">03 / A CLOSER LOOK</p><h2>Follow the evidence.</h2></div><p>A simple illustration of complementary completion. A missing alarm is filled using a compatible source record, rather than invented.</p></div><div class="example"><div class="example-title"><span class="mono">ILLUSTRATIVE EXAMPLE / TOOL TURRET</span><button class="button small" id="complete-button" aria-pressed="false">Complete the missing field ↗</button></div><div class="example-grid"><div class="example-field"><span>01 / ALARM</span><p id="alarm-value" class="missing">Missing field</p><small id="alarm-source">Awaiting complementary evidence</small></div><div class="example-field"><span>02 / PHENOMENON</span><p>Tool turret tool-change failure</p></div><div class="example-field"><span>03 / REASON</span><p>Tool turret position sensor fault</p></div><div class="example-field"><span>04 / SOLUTION</span><p>Check the tool turret position sensor</p></div></div><p class="source-record"><strong>Source record 2</strong> contains “Tool turret tool-change abnormality alarm” together with the same fault mechanism and corresponding corrective procedure. This is an illustration from the paper, not a live diagnostic service.</p></div></section>
-<section class="resources-section" id="resources"><div class="section wrap"><div class="section-heading"><div><p class="eyebrow">04 / EXPLORE THE WORK</p><h2>Read. Inspect. Build on it.</h2></div></div><div class="resource-grid"><a class="resource" target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2590123026050632"><span class="resource-number">01 / PUBLICATION ↗</span><h3>Read the full paper</h3><p>The methodology, experiments, ablation studies and limitations in Results in Engineering.</p><span class="resource-link">ScienceDirect ↗</span></a><a class="resource" target="_blank" rel="noopener" href="https://github.com/taojialin617/hitl-mkf-project"><span class="resource-number">02 / PROJECT ↗</span><h3>Explore this project</h3><p>Project overview, paper figures, result summaries and the source of this website.</p><span class="resource-link">GitHub repository ↗</span></a><a class="resource" id="request-link" target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2590123026050632"><span class="resource-number">03 / RESEARCH MATERIALS ↗</span><h3>Request data & code</h3><p>The 209-question test set, 100 candidate entity pairs and code are available on request.</p><span class="resource-link" id="request-label">Contact the authors via the paper ↗</span></a></div><p class="availability">The construction work orders contain confidential company information and are not publicly available. Shared code excludes confidential company information. This project page does not distribute the original industrial records.</p></div></section>
-<section class="section wrap citation-section" id="citation"><div><p class="eyebrow">05 / CITATION</p><h2>If this work helps<br>your research.</h2><p>Use the citation below to reference the paper.</p><a class="text-link" href="citation.bib" download>Download BibTeX ↓</a></div><div class="citation-box"><div class="citation-head"><span class="mono">BIBTEX</span><button id="copy-citation" aria-label="Copy BibTeX citation">Copy <span>⧉</span></button></div><pre><code id="bibtex"></code></pre><span class="sr-only" aria-live="polite" id="copy-status"></span></div></section>
+<header class="nav wrap">
+  <a class="brand" href="#overview">HitL<span>·</span>MKF</a>
+  <nav aria-label="Main navigation"><a href="#method">Method</a><a href="#results">Results</a><a href="#resources">Resources</a><a href="#citation">Cite</a></nav>
+</header>
+<main class="wrap">
+  <section class="hero" id="overview" aria-labelledby="paper-title">
+    <p class="publication"><span class="status-dot" aria-hidden="true"></span> Results in Engineering <span class="publication-year">2026</span></p>
+    <h1 id="paper-title"><span class="project-name">HitL-MKF</span><span class="paper-title">Human-in-the-Loop Multi-level Knowledge Fusion for Domain Knowledge Graph Construction using Large Language Models</span></h1>
+    <p class="authors">Jialin Tao<sup>1,2</sup><span>·</span>Yuhan Liu<sup>1,2</sup><span>·</span>Yufei Liu<sup>3,4,*</sup><span>·</span>Jianzhong Yang<sup>1,2</sup></p>
+    <div class="affiliations"><p><sup>1</sup> School of Mechanical Science and Engineering, HUST &nbsp; <sup>2</sup> National Intelligent Design and Numerical Control Technology Innovation Center, HUST</p><p><sup>3</sup> Center for Strategic Studies, Chinese Academy of Engineering &nbsp; <sup>4</sup> China Engineering Science Press</p></div>
+    <div class="hero-actions">
+      <a class="button primary" href="https://www.sciencedirect.com/science/article/pii/S2590123026050632" target="_blank" rel="noopener">Read paper <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://github.com/taojialin617/hitl-mkf-project" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="button" href="mailto:liuyf@cae.cn?subject=HitL-MKF%20data%20and%20code%20request">Request data &amp; code <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="intro" aria-label="Research overview">
+    <p>From fragmented maintenance records to connected diagnostic knowledge.</p>
+    <p class="summary">HitL-MKF combines LLM voting and expert review with entity alignment and path fusion. The resulting knowledge graph supports Two-Stage GraphRAG for CNC fault diagnosis.</p>
+    <div class="metrics"><div><strong>1,421</strong><span>maintenance work orders</span></div><div><strong>209</strong><span>diagnostic test questions</span></div><div><strong>0.6493</strong><span>BERT-F1</span></div><div><strong>8.11<small>/10</small></strong><span>mean Judge Score</span></div></div>
+  </section>
+
+  <section class="section" id="method" aria-labelledby="method-title">
+    <div class="section-heading"><h2 id="method-title">Method overview</h2><span>Human review, where it matters.</span></div>
+    <figure class="paper-figure">
+      <button class="zoom-image" data-image="assets/framework.png" aria-label="Enlarge the HitL-MKF framework figure"><img src="assets/framework.png" width="1493" height="1085" alt="HitL-MKF framework: knowledge extraction, entity alignment, path fusion and Two-Stage GraphRAG" loading="lazy"><span class="zoom-label">Enlarge ↗</span></button>
+      <figcaption>The HitL-MKF framework. Original figure from the paper.</figcaption>
+    </figure>
+    <ol class="method-steps"><li><span class="step-number">01</span><h3>Extract</h3><p>Structure work orders into Alarm, Phenomenon, Reason and Solution.</p></li><li><span class="step-number">02</span><h3>Review &amp; fuse</h3><p>Use HitL-Vote and expert review to align entities and fuse compatible paths.</p></li><li><span class="step-number">03</span><h3>Retrieve &amp; reason</h3><p>Construct an explicit reasoning path, then generate maintenance suggestions.</p></li></ol>
+  </section>
+
+  <section class="section" id="results" aria-labelledby="results-title">
+    <div class="section-heading"><h2 id="results-title">Key results</h2><span>Evaluated on 209 held-out questions.</span></div>
+    <div class="table-scroll"><table><caption class="sr-only">Diagnostic performance comparison from the paper.</caption><thead><tr><th scope="col">Method</th><th scope="col">BERT-F1 ↑</th><th scope="col">BLEU ↑</th><th scope="col">Judge Score ↑</th></tr></thead><tbody>
+      <tr><th scope="row">Naive RAG</th><td>0.2838</td><td>0.0896</td><td>7.0752 ± 0.0878</td></tr>
+      <tr><th scope="row">LightRAG</th><td>0.5507</td><td>0.4145</td><td>7.6084 ± 0.0722</td></tr>
+      <tr><th scope="row">HippoRAG</th><td>0.5739</td><td>0.4419</td><td>7.5608 ± 0.0741</td></tr>
+      <tr class="ours"><th scope="row">HitL-MKF <span>Ours</span></th><td>0.6493</td><td>0.5446</td><td>8.1109 ± 0.0668</td></tr>
+    </tbody></table></div>
+    <p class="table-note">LightRAG and HippoRAG use CNC-specific adaptations. Judge Score reports mean ± standard deviation across five scoring rounds. Results are from a single CNC manufacturer.</p>
+    <p class="result-insight"><strong>+0.0762 BERT-F1</strong> over Raw KG using the same Two-Stage GraphRAG strategy.</p>
+  </section>
+
+  <section class="section resources" id="resources" aria-labelledby="resources-title">
+    <div><h2 id="resources-title">Data &amp; code</h2><a class="text-link" href="mailto:liuyf@cae.cn?subject=HitL-MKF%20data%20and%20code%20request">Contact the corresponding author ↗</a></div>
+    <div><p>The evaluation datasets, including the <strong>209-question diagnostic test set</strong> and <strong>100 candidate entity pairs</strong>, are available on request. Code is also available on request, with confidential company information removed.</p><p class="muted">The work-order data used for knowledge graph construction are currently not publicly available because they contain confidential company information.</p></div>
+  </section>
+
+  <section class="section citation-section" id="citation" aria-labelledby="citation-title">
+    <div class="section-heading"><h2 id="citation-title">Citation</h2><a class="text-link" href="citation.bib" download>Download BibTeX ↓</a></div>
+    <p class="citation-text">Jialin Tao, Yuhan Liu, Yufei Liu, and Jianzhong Yang. <em>HitL-MKF: Human-in-the-Loop Multi-level Knowledge Fusion for Domain Knowledge Graph Construction using Large Language Models.</em> Results in Engineering, 2026, 114056. <a href="https://doi.org/10.1016/j.rineng.2026.114056" target="_blank" rel="noopener">doi:10.1016/j.rineng.2026.114056 ↗</a></p>
+    <details class="bibtex-details"><summary>Show BibTeX</summary><div class="citation-box"><button id="copy-citation" type="button">Copy</button><pre><code id="bibtex"></code></pre><span class="sr-only" aria-live="polite" id="copy-status"></span></div></details>
+  </section>
 </main>
-<footer class="wrap"><a class="brand" href="#"><span class="brand-icon">✳</span> HitL-MKF</a><p>Human judgment. Connected knowledge.</p><a href="https://github.com/taojialin617/hitl-mkf-project" target="_blank" rel="noopener">Project source ↗</a></footer>
-<dialog id="figure-dialog"><button id="close-figure" aria-label="Close enlarged figure">Close ×</button><img id="enlarged-figure" alt="Enlarged original paper figure"></dialog>
+<footer class="wrap"><span>HitL-MKF · Results in Engineering, 2026</span><a href="https://github.com/taojialin617/hitl-mkf-project" target="_blank" rel="noopener">Website source ↗</a></footer>
+<dialog id="figure-dialog" aria-label="Enlarged framework figure"><button id="close-figure" type="button" aria-label="Close enlarged figure">Close ×</button><img id="enlarged-figure" alt="Enlarged original HitL-MKF framework figure"></dialog>
 <script src="paper.js"></script><script src="script.js"></script>
-</body></html>
+</body>
+</html>
